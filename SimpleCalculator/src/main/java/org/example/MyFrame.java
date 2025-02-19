@@ -3,7 +3,7 @@ import javax.swing.JFrame;
 
 public class MyFrame extends JFrame {
     public MyFrame(Calculator calculator) {
-        super ("Работа с людьми");
+        super ("Calculator");
         getContentPane().add(new MyStartPane(calculator, this));
         pack();
         setSize(640,360);

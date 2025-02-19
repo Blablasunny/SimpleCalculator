@@ -21,14 +21,12 @@ public class MyStartPane extends JPanel {
         this.calculator = calculator;
         this.frame = frame;
 
-        setLayout (new GridLayout(2,2));
+        setLayout (new GridLayout(2,4));
         add(button1);
         add(button2);
         add(button3);
         add(button4);
-        setLayout (new GridLayout(1,1));
         add(label);
-        setLayout (new GridLayout(1,3));
         add(txtFieldA);
         add(txtFieldB);
         add(labelRes);
@@ -45,7 +43,19 @@ public class MyStartPane extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            try{
+                float a, b;
+                try {
+                    a = Float.parseFloat(txtFieldA.getText());
+                    b = Float.parseFloat(txtFieldB.getText());
+                }catch (Exception ex){
+                    System.out.println("Должны быть введены числа");
+                    throw new Exception();
+                }
+                labelRes.setText(String.valueOf(calculator.add(a, b)));
+            } catch (Exception ex) {
+                System.out.println("Не удалось выполнить операцию");
+            }
         }
     }
 
@@ -56,7 +66,19 @@ public class MyStartPane extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            try{
+                float a, b;
+                try {
+                    a = Float.parseFloat(txtFieldA.getText());
+                    b = Float.parseFloat(txtFieldB.getText());
+                }catch (Exception ex){
+                    System.out.println("Должны быть введены числа");
+                    throw new Exception();
+                }
+                labelRes.setText(String.valueOf(calculator.subtract(a, b)));
+            } catch (Exception ex) {
+                System.out.println("Не удалось выполнить операцию");
+            }
         }
     }
 
@@ -67,7 +89,19 @@ public class MyStartPane extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            try{
+                float a, b;
+                try {
+                    a = Float.parseFloat(txtFieldA.getText());
+                    b = Float.parseFloat(txtFieldB.getText());
+                }catch (Exception ex){
+                    System.out.println("Должны быть введены числа");
+                    throw new Exception();
+                }
+                labelRes.setText(String.valueOf(calculator.multiply(a, b)));
+            } catch (Exception ex) {
+                System.out.println("Не удалось выполнить операцию");
+            }
         }
     }
 
@@ -78,7 +112,19 @@ public class MyStartPane extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            try{
+                float a, b;
+                try {
+                    a = Float.parseFloat(txtFieldA.getText());
+                    b = Float.parseFloat(txtFieldB.getText());
+                }catch (Exception ex){
+                    System.out.println("Должны быть введены числа");
+                    throw new Exception();
+                }
+                labelRes.setText(String.valueOf(calculator.divide(a, b)));
+            } catch (Exception ex) {
+                System.out.println("Не удалось выполнить операцию");
+            }
         }
     }
 
