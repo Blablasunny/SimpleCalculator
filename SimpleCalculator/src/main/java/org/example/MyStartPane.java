@@ -22,14 +22,14 @@ public class MyStartPane extends JPanel {
         this.frame = frame;
 
         setLayout (new GridLayout(2,4));
-        add(button1);
-        add(button2);
-        add(button3);
-        add(button4);
         add(label);
         add(txtFieldA);
         add(txtFieldB);
         add(labelRes);
+        add(button1);
+        add(button2);
+        add(button3);
+        add(button4);
 
         button1.addActionListener(new MyEvent1());
         button2.addActionListener(new MyEvent2());
